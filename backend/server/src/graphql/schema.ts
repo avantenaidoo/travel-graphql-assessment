@@ -1,3 +1,4 @@
+// src/graphql/schema.ts
 import { gql } from 'apollo-server-express';
 
 export const typeDefs = gql`
@@ -42,3 +43,11 @@ export const typeDefs = gql`
     OUTDOOR_SIGHTSEEING
   }
 `;
+
+// Export the enum at runtime so `keyof typeof ActivityName` works in weather.ts
+export enum ActivityName {
+  SKIING = 'SKIING',
+  SURFING = 'SURFING',
+  INDOOR_SIGHTSEEING = 'INDOOR_SIGHTSEEING',
+  OUTDOOR_SIGHTSEEING = 'OUTDOOR_SIGHTSEEING',
+}
