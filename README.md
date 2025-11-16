@@ -5,13 +5,15 @@
 ---
 
 ## Overview
-A **scalable GraphQL backend** for a travel planning app.  
+
+A **scalable, type-safe GraphQL backend** for travel planning.  
 Supports:
+
 - Dynamic **city suggestions**
 - **7-day weather forecasts**
 - **Activity ranking** based on weather (Skiing, Surfing, Indoor/Outdoor Sightseeing)
 
-**Built in 2–3 hours** using **TypeScript**, **Apollo Server**, and **Open-Meteo API**.
+Built in **~2.5 hours** using **TypeScript**, **ESM**, **Apollo Server**, and the **Open-Meteo API**.
 
 ---
 
