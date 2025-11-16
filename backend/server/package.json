@@ -7,8 +7,8 @@
     "build": "rimraf dist && tsc",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
-    "test": "jest",
-    "test:cov": "jest --coverage"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:cov": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "keywords": [],
   "author": "",
@@ -46,15 +46,13 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "extensionsToTreatAsEsm": [".ts"],
-    "globals": {
-      "ts-jest": {
-        "useESM": true
-      }
-    },
     "moduleNameMapper": {
       "^(\\.{1,2}/.*)\\.js$": "$1"
     },
-    "transform": {},
-    "testRegex": "tests/.*\\.test\\.ts$"
+    "transform": {
+      "^.+\\.ts$": ["ts-jest", { "useESM": true }]
+    },
+    "testRegex": "tests/.*\\.test\\.ts$",
+    "moduleFileExtensions": ["ts", "js", "json", "node"]
   }
 }
