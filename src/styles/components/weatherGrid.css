@@ -1,0 +1,38 @@
+.grid-container {
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.grid-container.visible {
+    opacity: 1;
+}
+
+.daily-tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+}
+
+.btn-tile > img {
+    position: relative;
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+    padding: 7px; 
+    background-color: #e5e7eb; 
+    border-radius: 25%; 
+    box-sizing: border-box; 
+    transition: background-color 0.3s ease; 
+  }
+  
+.btn-tile > img:hover {
+  background-color: #d1d5db; 
+}

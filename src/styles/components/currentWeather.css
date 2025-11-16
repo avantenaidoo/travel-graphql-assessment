@@ -1,0 +1,47 @@
+.current-display {
+  text-align: center;
+  width: calc(100% - 1.5rem);
+  max-width: 700px;
+  min-height: 100px;
+  max-height: 100%;
+  margin: 0 auto 0.5rem auto;
+  color: rgb(21, 26, 26);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.current-display.visible {
+  opacity: 1;
+}
+
+.temp-result {
+  color: rgb(46, 51, 51);
+  font-size: 3.5rem;
+  text-shadow: 2px 0px 1.5px #928f8f;
+  border: none;
+  cursor: default;
+}
+
+.degree-unit {
+  font-size: 1.5rem;
+  vertical-align: top;
+}
+
+.weather-icon {
+  margin-left: 20px;
+  max-width: 80px;
+  max-height: 80px;
+  border: none;
+  border-radius: 100%;
+
+}
+
+.weather-icon[src$=".svg"] {
+  border-radius: 0;  /* Removes border-radius for SVG */
+}
+
+.display-error {
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  width: 270px;
+}
